@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flickr API Gallery</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="container">
+	<h1>Flickr API Gallery</h1>
+	<!-- Search Form -->
+		<form class="js__form__search form__search" action="/search" method="get" role="search">
+			<label for="query" aria-label="Search">Search:</label>
+			<input type="search" name="query" id="query" placeholder="Search" required/>
+			<input type="submit" value="Search"/>
+		</form>
+</header>
+<main class="container">
+	<!-- Gallery -->
+	<div class="js__gallery gallery">
+		<img src="" class="js__gallery__image">
+		<button class="js__gallery__arrow__left gallery__arrow gallery__arrow__left">
+			<span class="visually__hidden">Previous photo</span>
+		</button>
+		<button class="js__gallery__arrow__right gallery__arrow gallery__arrow__right">
+			<span class="visually__hidden">Next photo</span>
+		</button>
+	</div>
+	<!-- List of Thumbnails -->
+	<div class="container thumbnails">
+		<ul class="js__thumbnails__list thumbnails__list"></ul>
+		<ol class="js__thumbnails__pager thumbnails__pager"></ol>
+	</div> 
+</main>	
+</body>
+	<script src="js/utility.js"></script>
+	<script src="js/gallery.js"></script>
+	<script src="js/flickr.js"></script>
+	<script src="js/app.js"></script>
+</html>
